@@ -91,7 +91,7 @@ class SimpleWooCommerceCheckout {
     public function checkout_shortcode($atts) {
         $atts = shortcode_atts(array(
             'main_product_id' => '29441',
-            'upsell_product_id' => '29442',
+            'upsell_product_id' => '29914',
             'main_price' => '19.00',
             'upsell_price' => '17.00'
         ), $atts);
@@ -118,8 +118,8 @@ class SimpleWooCommerceCheckout {
         $add_upsell = isset($_POST['add_upsell']) ? 1 : 0;
         
         // Product IDs
-        $main_product_id = intval($_POST['main_product_id'] ?? 29441);
-        $upsell_product_id = intval($_POST['upsell_product_id'] ?? 29442);
+        $main_product_id = intval($_POST['main_product_id'] ?? 29441); // STARTER PACK: Passive Income
+        $upsell_product_id = intval($_POST['upsell_product_id'] ?? 29914); // Strategy Pack
         
         // Validate required fields
         $errors = array();
